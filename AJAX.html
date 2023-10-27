@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Studio Ghibli Films</title>
+</head>
+<body>
+    
+    <h1>Studio Ghibli Films</h1>
+
+    <script language="javascript">
+        res = fetch("https://ghibliapi.vercel.app/films/")
+            .then(res=>res.json())
+            .then(data=> {
+                if(data) {
+                    var str="";
+                    for (i=0; i < data.length; i++) {
+                        str += "<div class='film'>"+
+                            "<div class='title'>"+data[i].title+"</div>"
+                            + "<img src=" + data[i].image +" alt="+data[i].title+">"
+                            +"<div class='desc' id = 'desc'>"+data[i].description+"</div>"
+                            +"</div>";
+                    }; 
+                    document.getElementById("all_films").innerHTML = str;
+                    return;
+                } else {
+                    alert("did not work");
+                }
+            })
+            .catch(error=> console.log(error));
+    </script>
+    <div class="all_films" id="all_films"></div>
+</body>
+</html>

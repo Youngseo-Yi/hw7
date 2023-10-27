@@ -1,0 +1,44 @@
+
+
+img{
+    width: 50%;
+    margin: 5px;
+}
+
+.all_films {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #2B2D42;
+    background-color: #2B2D42;
+}
+
+.film {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #EDF2F4;
+    width: 300px;
+    height: 500px;
+    vertical-align: top;
+    margin: 5px;
+    overflow: auto;
+    position: relative;
+    background-color: #EDF2F4;
+}
+h1 {
+    font-size:50px;
+    padding: 20px;
+    background-color: #2B2D42;
+    color: #EDF2F4;
+    font-family: "Avantgarde", "TeX Gyre Adventor", sans-serif;
+}
+
+.film .desc {
+    font-family: "Avantgarde", "TeX Gyre Adventor", sans-serif;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #2B2D42;
+    color: #EDF2F4;
+}
