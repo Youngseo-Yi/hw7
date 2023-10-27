@@ -1,3 +1,12 @@
+<!--
+Youngseo Yi
+10-27-23
+CS20: Web Programming
+Homework 7: AJAX
+Content: the HTML file for the Studio Ghibli movie screen, using the data from
+a public API
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +21,7 @@
     <h1>Studio Ghibli Films</h1>
 
     <script language="javascript">
+        //getting the data; storing it in divs
         res = fetch("https://ghibliapi.vercel.app/films/")
             .then(res=>res.json())
             .then(data=> {
@@ -32,6 +42,22 @@
             })
             .catch(error=> console.log(error));
     </script>
+
+    <!--the movies-->
     <div class="all_films" id="all_films"></div>
+    <!--the info-->
+    <h2>About the Page</h2>
+    <p>The API I chose was an API that catalogs the film information, 
+        characters, places, and objects for all the Studio Ghibli films.
+        <br> This is the website where I found it:  
+        <a href="https://ghibliapi.vercel.app/#">Link to API</a> (URL: <a href="https://ghibliapi.vercel.app/#">https://ghibliapi.vercel.app/#</a>)
+        <br> I used the URL addition "/films/" to find the array of all the
+        film JSON objects. The information that I used were each film's title, 
+        image, and description of the film.
+        <br> This API would be useful for showing all the Studio Ghibli films as
+        an informational wiki of Studio Ghibli's work. The API can also be 
+        useful for finding specific characters and vehicles in the films,
+        perhaps to give ideas for making fanart for these films.
+    </p>
 </body>
 </html>
